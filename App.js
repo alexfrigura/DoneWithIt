@@ -1,11 +1,12 @@
-import React from 'react';
-import AppText from './app/components/AppText';
+import React, { useEffect, useState } from 'react';
+import Screen from './app/components/Screen';
+import * as ImagePicker from 'expo-image-picker';
+import * as Permissions from "expo-permissions";
+import { Button, Image } from 'react-native';
+import ImageInput from './app/components/ImageInput';
+import ImageInputList from './app/components/ImageInputList';
 import ListingEditScreen from './app/screens/ListingEditScreen';
 
-function App(props) {
-  return (
-    <ListingEditScreen />
-  );
+export default function App() {
+  return <ListingEditScreen />
 }
-
-export default App;
