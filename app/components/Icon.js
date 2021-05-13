@@ -6,7 +6,7 @@ function Icon ({
     name,
     size = 40,
     backgroundColor = "#000",
-    iconColor = "#fff"
+    iconColor = "#fff",
 }) {
 
     return (
@@ -23,4 +23,4 @@ function Icon ({
     );
 }
 
-export default Icon; 
+export default Icon;
