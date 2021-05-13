@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
 import { FlatList, Platform, StatusBar, View, onPress } from 'react-native';
-import ListItem from '../components/ListItem';
-import ListItemDeleteAction from '../components/ListItemDeleteAction';
-import ListItemSeparator from '../components/ListItemSeparator';
+import ListItem from '../components/lists/ListItem';
+import ListItemDeleteAction from '../components/lists/ListItemDeleteAction';
+import ListItemSeparator from '../components/lists/ListItemSeparator';
 import Screen from '../components/Screen';
 
 const initialMessages = [
     {
         id: 1,
-        title: 'T1',
-        description: 'D1',
+        title: 'Alex Frigura',
+        description: 'Hey! Is this item still available?',
         image: require('../assets/alex.jpg')
     },
     {
         id: 2,
-        title: 'T2',
-        description: 'D2',
+        title: 'Alex Frigura',
+        description: "I'm interested in this item. When will you be able to post it?",
         image: require('../assets/alex.jpg')
     },
 ]
