@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { StyleSheet } from "react-native";
 import * as Yup from "yup";
-import * Location from 'expo-location';
+import * as Location from 'expo-location';
 
 import AppForm from "../components/forms/AppForm";
 import AppFormPicker from "../components/forms/AppFormPicker";

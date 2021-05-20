@@ -8,7 +8,7 @@ function Icon ({
     backgroundColor = "#000",
     iconColor = "#fff",
 }) {
-
+    console.log("name",name);
     return (
         <View style={{
             width: size,

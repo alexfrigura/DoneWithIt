@@ -4,7 +4,7 @@ import ImageInput from './ImageInput';
 
 export default function ImageInputList({ imageUris = [], onRemoveImage, onAddImage }) {
     const scrollView = useRef();
-    
+    console.log("kebab", imageUris)
     return (
         <View>
         <ScrollView ref={scrollView} horizontal onContentSizeChange={() => scrollView.current.scrollToEnd()}>

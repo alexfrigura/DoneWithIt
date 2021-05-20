@@ -34,12 +34,11 @@ function ImageInput({ imageUri, onChangeImage }) {
         }
         
       }
-
+console.log("imageUri", imageUri);
     return (
         <TouchableWithoutFeedback onPress={handlePress}>
             <View style={styles.container}>
-                {!imageUri && (<MaterialCommunityIcons name="camera" size={40} color={colors.medium}/>)}
-                {!imageUri && (<Image source={{ uri: imageUri }} style={styles.image}/>)}
+                {!imageUri ? (<MaterialCommunityIcons name="camera" size={40} color={colors.medium} style={styles.camera}/>): (<Image source={{ uri: imageUris }} style={styles.image}/>)}
             </View>
         </TouchableWithoutFeedback>
     );
@@ -59,6 +58,9 @@ const styles = StyleSheet.create({
         width: "100%",
         height: "100%",
     },
+    camera: {
+        position: "absolute",
+    }
 });
 
 export default ImageInput;
