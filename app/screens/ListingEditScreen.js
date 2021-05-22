@@ -10,6 +10,7 @@ import SubmitButton from "../components/forms/SubmitButton";
 import Screen from "../components/Screen";
 import CategoryPickerItem from "../components/CategoryPickerItem";
 import FormImagePicker from "../components/forms/FormImagePicker";
+import useLocation from "../hooks/useLocation";
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required().min(1).label("Title"),
@@ -77,21 +78,10 @@ const categories = [
 ];
 
 function ListingEditScreen() {
-  const [location, setLocation] =useState();
-  
-  const getLocation = async () => {
-    const { granted } = await Location.requestForegroundPermissionsAsync();
-    if (!granted) return;
-   const { coords: {latitude, longitude } } = await Location.getLastKnownPositionAsync();
-   setLocation({ latitude, longitude });
-  }
-  
-  useEffect(() => {
-   getLocation();
-  }, [])
-  
+  const location = useLocation();
+
   return (
-    <Screen style={styles.container}>
+    <Screen style={styles .container}>
       <AppForm
         initialValues={{
           title: "",
